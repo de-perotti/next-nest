@@ -1,0 +1,39 @@
+{
+  "name": "next-nest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "back:build": "nest build",
+    "front:build": "next build",
+    "start": "nest start",
+    "start:dev": "nest start --watch",
+    "start:debug": "nodemon --watch src -e ts --exec ts-node"
+  },
+  "author": "Luigi Perotti",
+  "license": "ISC",
+  "dependencies": {
+    "@nestjs/common": "^6.10.13",
+    "@nestjs/core": "^6.10.13",
+    "@nestjs/platform-express": "^6.10.13",
+    "next": "9.1.7",
+    "react": "16.12.0",
+    "react-dom": "16.12.0",
+    "reflect-metadata": "^0.1.13",
+    "rxjs": "^6.5.4"
+  },
+  "devDependencies": {
+    "@nestjs/cli": "^6.12.9",
+    "@nestjs/testing": "^6.10.13",
+    "@testing-library/cypress": "^5.0.2",
+    "@types/jest": "^24.0.25",
+    "@types/node": "^13.1.4",
+    "@types/react": "^16.9.17",
+    "cypress": "^3.8.1",
+    "jest": "^24.9.0",
+    "nodemon": "^2.0.2",
+    "ts-loader": "^6.2.1",
+    "ts-node": "^8.5.4",
+    "typescript": "^3.7.4"
+  }
+}
