@@ -22,3 +22,4 @@ cd coverage/lcov-report && python -m SimpleHTTPServer 3030;
 - [ ] nodemon.json
 - [ ] docker for ci
 - [ ] tune next.config.ts
+- [ ] one-for-all i18n solution
