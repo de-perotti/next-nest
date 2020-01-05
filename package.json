@@ -80,6 +80,11 @@
       "^.+\\.(t|j)s$": "ts-jest"
     },
     "coverageDirectory": "./coverage",
-    "testEnvironment": "node"
+    "testEnvironment": "node",
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "server/**/*.{js,jsx,ts,tsx}",
+      "!server/cmd/*"
+    ]
   }
 }
