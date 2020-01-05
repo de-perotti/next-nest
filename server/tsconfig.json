@@ -4,8 +4,9 @@
     "module": "commonjs",
     "noEmit": false,
     "declaration": false,
-    "outDir": "../dist/server"
+    "outDir": "../dist/server",
+    "baseUrl": "./"
   },
-  "include": ["src/**/*"],
+  "include": ["./**/*"],
   "exclude": ["node_modules", "dist", "test", "**/*spec.ts"]
 }

@@ -1,7 +1,7 @@
 {
   "monorepo": true,
-  "root": ".",
-  "sourceRoot": ".",
+  "root": "server",
+  "sourceRoot": "server",
   "compilerOptions": {
     "webpack": true,
     "tsConfigPath": "server/tsconfig.json"
@@ -10,8 +10,8 @@
     "app": {
       "type": "application",
       "root": "server",
-      "entryFile": "app.main",
-      "sourceRoot": "server/src",
+      "entryFile": "cmd/app.main",
+      "sourceRoot": "server",
       "compilerOptions": {
         "tsConfigPath": "server/tsconfig.json"
       }

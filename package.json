@@ -4,8 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "back:build": "nest build",
-    "front:build": "next build",
+    "app:build": "next build",
+    "app:test": "jest -c app/jest.config.js",
+    "cypress:dev": "cypress open",
+    "app:test:e2e": "e2etest.sh",
+    "server:build": "nest build",
+    "server:test": "jest -c server/jest.config.js",
     "start": "nest start",
     "start:dev": "nest start --watch",
     "start:debug": "nodemon --watch src -e ts --exec ts-node"
@@ -26,15 +30,19 @@
     "@nestjs/cli": "^6.12.9",
     "@nestjs/testing": "^6.10.13",
     "@testing-library/cypress": "^5.0.2",
+    "@types/express": "^4.17.2",
     "@types/jest": "^24.0.25",
     "@types/node": "^13.1.4",
     "@types/react": "^16.9.17",
+    "@types/supertest": "^2.0.8",
     "cypress": "^3.8.1",
     "husky": ">=1",
     "jest": "^24.9.0",
     "lint-staged": ">=8",
     "nodemon": "^2.0.2",
     "prettier": "^1.19.1",
+    "supertest": "^4.0.2",
+    "ts-jest": "^24.2.0",
     "ts-loader": "^6.2.1",
     "ts-node": "^8.5.4",
     "typescript": "^3.7.4"
@@ -49,5 +57,29 @@
       "prettier --write",
       "git add"
     ]
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "ts",
+      "tsx"
+    ],
+    "rootDir": ".",
+    "testRegex": [
+      ".spec.ts$",
+      ".spec.tsx$",
+      ".test.ts$",
+      ".test.tsx$"
+    ],
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "/cypress/"
+    ],
+    "transform": {
+      "^.+\\.(t|j)s$": "ts-jest"
+    },
+    "coverageDirectory": "./coverage",
+    "testEnvironment": "node"
   }
 }
