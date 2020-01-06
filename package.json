@@ -53,7 +53,7 @@
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged",
-      "pre-push": "jest"
+      "pre-push": "NODE_ENV=test jest"
     }
   },
   "lint-staged": {
@@ -63,6 +63,11 @@
     ]
   },
   "jest": {
+    "globals": {
+      "ts-jest": {
+        "tsConfig": "tsconfig.jest.json"
+      }
+    },
     "moduleFileExtensions": [
       "js",
       "json",
@@ -80,15 +85,18 @@
       "/node_modules/",
       "/cypress/"
     ],
-    "transform": {
-      "^.+\\.(t|j)s$": "ts-jest"
-    },
+    "preset": "ts-jest/presets/js-with-ts",
     "coverageDirectory": "./coverage",
     "testEnvironment": "node",
     "collectCoverage": true,
     "collectCoverageFrom": [
       "server/**/*.{js,jsx,ts,tsx}",
-      "!server/cmd/*"
+      "!server/cmd/*",
+      "!server/dist/*",
+      "!server/webpack*"
+    ],
+    "setupFiles": [
+      "./setupTests.js"
     ]
   }
 }
