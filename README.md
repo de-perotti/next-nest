@@ -23,3 +23,7 @@ cd coverage/lcov-report && python -m SimpleHTTPServer 3030;
 - [ ] docker for ci
 - [ ] tune next.config.ts
 - [ ] one-for-all i18n solution
+- [ ] define dir in next so we can move pages out of the root
+- [ ] cli toolchain for starting servers and frontends
+- [ ] make production build from outside `next build` to work
+      -> probably by copy pasting stuff
